@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Title from "./components/Title";
 import Flex from "./components/Flex";
 import Console from "./components/Console";
+import Button from "./components/Button";
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -13,12 +14,17 @@ const AppWrapper = styled.div`
 
 function App() {
   return (
-    <AppWrapper>
-      <Flex justify="center">
-        <Title color={"green"}>Console cmd 2023 </Title>
-      </Flex>
-      <Console/>
-    </AppWrapper>
+    <>
+      <AppWrapper>
+        <Flex justify="center">
+          <Title>Console cmd 2023 </Title>
+        </Flex>
+        <Flex direction="column" margin="10px 0">
+          <Console/>
+          <Button color="green"  alight={"flex-end"}>Send</Button>
+        </Flex>
+      </AppWrapper>
+    </>
   );
 }
 
